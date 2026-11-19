@@ -4,6 +4,10 @@ Real-time delay prediction for five central-Berlin transit lines (U2, M10, S5, S
 
 University project for the Web Services course (Eunice University) by **Muhammad Waseem** and **Zahid Shah**.
 
+## Project report
+
+The full project report (architecture, database schema, ingestion pipeline, prediction rules, screenshots of a live run and critical evaluation) is in [`docs/VBB-SmartDelay_Report.pdf`](docs/VBB-SmartDelay_Report.pdf).
+
 ## What it does
 
 The system ingests live data from three public APIs, stores it in a PostgreSQL + PostGIS database, and combines the streams to produce a delay estimate that accounts for weather. When a predicted delay is large enough that walking to a nearby Nextbike would actually be faster than waiting, it suggests the bike.
@@ -18,6 +22,8 @@ The system ingests live data from three public APIs, stores it in a PostgreSQL +
 
 ```
 vbb-smartdelay/
+├── docs/
+│   └── VBB-SmartDelay_Report.pdf  # project report
 ├── docker-compose.yml      # optional local PostgreSQL + PostGIS
 ├── init-db.sql             # database schema (tables + spatial indexes)
 ├── setup_database.py       # one-time: create the schema
